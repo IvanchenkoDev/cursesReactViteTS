@@ -24,7 +24,7 @@ const Faq: React.FC = () => {
     <div className="faq-container">
       <h2 className="faq-title">FAQ</h2>
       <div className="faq-content">
-        {/* Список вопросов */}
+ 
         <div className="faq-messages">
           {messages.map((msg, index) => (
             <div
@@ -44,7 +44,6 @@ const Faq: React.FC = () => {
           ))}
         </div>
 
-        {/* Форма для вопросов */}
         <div className="faq-form-container">
           <h3 className="faq-form-title">Ask your question</h3>
           <form onSubmit={handleSubmit} className="faq-form">

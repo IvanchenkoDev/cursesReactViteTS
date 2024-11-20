@@ -1,19 +1,7 @@
-$color-primary: #003366;
-$color-inactive: #C2D1E0;
-$color-background: #E0E7EF;
-$color-text-primary: #FBFBFB;
-$color-text-secondary: #343434;
-
-$font-family-title: "Poppins", sans-serif;
-$font-family-base: "Roboto", sans-serif;
-
-h4 {
-  margin: 0;
-}
+@use '../../styles/utils/variables.module' as *;
+@use '../../styles/utils/reset.scss' as *;
 
 p {
-  margin: 0;
-  
   font-family: $font-family-base;
 }
 
@@ -106,11 +94,11 @@ p {
     background-color: $color-primary;
     border: none;
     border-radius: 50%;
+    
+    &--inactive {
+      background-color: $color-inactive;
+    }
   }
-
-   &__button--inactive {
-     background-color: #C2D1E0;
-   }
 
   &__indicators {
     width: 69px;
@@ -122,7 +110,7 @@ p {
     width: 13px;
     height: 4px;
     border-radius: 20px;
-    background-color: $color-inactive;
+    background-color: #BFCCD8;
 
     &--active {
       width: 24px;
@@ -130,5 +118,4 @@ p {
       transition: background-color 0.3s, width 0.3s;
     }
   }
-
 }

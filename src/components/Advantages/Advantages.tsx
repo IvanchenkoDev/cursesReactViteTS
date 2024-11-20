@@ -4,7 +4,6 @@ import IconSectionRoket from '../../images/roket-icon.svg';
 import IconSectionBulp from '../../images/bulb-icon.svg';
 import IconSectionBook from '../../images/book-icon.svg';
 
-
 const Advantages: React.FC = () => {
   return (
     <div className="advantages">
