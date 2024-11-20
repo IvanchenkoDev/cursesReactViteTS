@@ -1,0 +1,192 @@
+$color-primary: #003366;              // Основной цвет (для кнопок, заголовков)
+$color-background: #E0E7EF;           // Цвет фона
+$color-text-primary: #E0E7EF;         // Основной цвет текста
+$color-text-secondary: #343434;       // Вторичный цвет текста
+
+$font-family-title: "Poppins", sans-serif;
+$font-family-base: "Roboto",  sans-serif;
+
+$container-width: 1340px;
+
+.our-courses {
+  max-width: $container-width;
+  margin: 50px auto; 
+
+  &__title {
+    color: $color-primary;
+    font-family: $font-family-title;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 63px;
+    text-transform: uppercase;
+  }
+
+  &__section {
+    border: 2px solid #003366;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 20px 0 20px 0;
+    
+    h2 {
+      max-width: $container-width;
+    }
+
+    h3 {
+      font-family: $font-family-title;
+      font-weight: 500;
+      color: $color-primary;
+      font-size: 24px;
+      text-transform: uppercase;
+      line-height: 36px;
+    }
+
+    h4 {
+      font-family: $font-family-title;
+      font-weight: 500;
+      color: $color-primary;
+      font-size: 20px;
+      text-transform: uppercase;
+      line-height: 30px;
+      // margin: 40px 40px 16px 40px;
+    }
+
+    h5 {
+      font-family: $font-family-base;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      color: $color-text-secondary;
+      margin: 16px 40px 8px 0;
+    }
+  }
+
+  &__subtitle-container {
+    display: flex;
+    align-items: center; 
+    gap: 15px;
+    margin: 40px 0;
+  }
+
+  &__details-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    font-family: $font-family-base;
+    color: $color-text-secondary;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-left: 190px;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 12px; 
+    margin: 40px 0;
+    
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-text-primary;
+      width: 128px;
+      height: 47px;
+      border-radius: 45px;
+      padding: 0 10px;
+      font-family: $font-family-base;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+
+      & .our-courses__icon {
+        margin-right: 8px;
+      }
+      
+      & p {
+        margin: 0; 
+        font-family: $font-family-base;
+      }
+    }
+  }
+
+  &__model {
+    // margin: 16px 40px 16px 40px;
+    &-title {
+      font-family: $font-family-title;
+      font-weight: 500;
+      color: $color-primary;
+      font-size: 20px;
+      line-height: 30px;
+      margin: 40px 40px 16px 40px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px; 
+      color: #343434;
+      font-family: $font-family-base;
+    }
+
+    &-icon {
+      margin-right: 10px;
+    }
+  }
+
+  &__price {
+    // padding: 24px 0 40px 40px;
+    font-family: $font-family-base;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 24px;
+    &-label {
+      font-family: $font-family-base;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 45px;
+      color: $color-primary;
+      text-transform: uppercase;
+      border-right: 2px solid $color-primary;
+      padding-right: 16px;
+    }
+  
+    &-amount {
+      font-weight: 700;
+      font-size: 22px;
+      color: $color-primary;
+      padding-left: 16px;
+    }
+  }
+
+  &__button-container {
+
+    
+    .our-courses__button {
+      margin-top: 40px;
+      width: 185px;
+      height: 58px;
+      background-color: $color-primary;
+      color: $color-text-primary;
+      padding: 15px 25px;
+      font-size: 18px;
+      font-weight: 500;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      text-transform: uppercase;
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      &:focus {
+        outline: none; 
+      }
+    }
+  }
+}

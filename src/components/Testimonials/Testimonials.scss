@@ -1,0 +1,134 @@
+$color-primary: #003366;
+$color-inactive: #C2D1E0;
+$color-background: #E0E7EF;
+$color-text-primary: #FBFBFB;
+$color-text-secondary: #343434;
+
+$font-family-title: "Poppins", sans-serif;
+$font-family-base: "Roboto", sans-serif;
+
+h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  
+  font-family: $font-family-base;
+}
+
+.testimonials {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 1340px;
+  text-align: left;
+
+  &__title {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 42px;
+    line-height: 63px;
+    color: $color-primary;
+    font-family: $font-family-title;
+  }
+
+  &__text {
+    padding-top: 16px;
+  }
+
+  &__carousel {
+    align-items: center;
+    padding: 0 14px;
+    width: 221px;
+    height: 56px;
+    background-color: $color-text-primary;
+    border-radius: 28px;
+    border: 1px solid #BFCCD8;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 50px auto;
+  }
+
+  &__wrapper {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__container {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &__item {
+    padding: 20px;
+    border: 1px solid $color-primary;
+    border-radius: 12px;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__name {
+    font-size: 20px;
+    color: $color-text-secondary;
+    font-family: $font-family-title;
+    line-height: 30px;
+  }
+
+  &__role {
+    font-size: 16px;
+    color: #6b6b6b;
+    line-height: 24px;
+  }
+
+  &__stars {
+    display: flex;
+    gap: 5px;
+  }
+
+  &__button {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: $color-primary;
+    border: none;
+    border-radius: 50%;
+  }
+
+   &__button--inactive {
+     background-color: #C2D1E0;
+   }
+
+  &__indicators {
+    width: 69px;
+    display: flex;
+    gap: 2px;
+  }
+
+  &__indicator {
+    width: 13px;
+    height: 4px;
+    border-radius: 20px;
+    background-color: $color-inactive;
+
+    &--active {
+      width: 24px;
+      background-color: $color-primary;
+      transition: background-color 0.3s, width 0.3s;
+    }
+  }
+
+}
