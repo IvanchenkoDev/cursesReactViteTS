@@ -52,12 +52,27 @@
     }
   }
 
+
   &__subtitle-container {
     display: flex;
     align-items: center; 
+    justify-content: space-between;
     gap: 15px;
     margin: 40px 0;
   }
+
+  &__subtitle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5px;
+  }
+
+  &__subtitle {
+    margin-left: 14px;
+  }
+
+
 
   &__details-link {
     display: flex;
