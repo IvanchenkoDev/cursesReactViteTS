@@ -1,11 +1,12 @@
-import { Link } from 'react-router-dom';
 import Logo from '../../images/Logo.svg';
 import './Footer.scss';
+import AnchorLink from "../AnchorLink/AnchorLink";
 
 const Footer: React.FC = () => {
   const handleLogoClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
   return (
     <footer className="footer">
       <div className="footer__container">
@@ -18,20 +19,18 @@ const Footer: React.FC = () => {
       />
         <p className="footer__text">© 2024 Dickens Consulting Group, LLC</p>
         <div className="footer__buttons">
-          <Link to="/course" className="footer__buttons__link">
+          <AnchorLink to="course" className="footer__buttons__link">
             Course
-          </Link>
-          <Link to="/about" className="footer__buttons__link">
+          </AnchorLink>
+          <AnchorLink to="about" className="footer__buttons__link">
             About
-          </Link>
-          <Link to="/contact" className="footer__buttons__link">
+          </AnchorLink>
+          <AnchorLink to="/contact" className="footer__buttons__link">
             Contact
-          </Link>
+          </AnchorLink>
         </div>
       </div>
-      
   </footer>
-  
   );
 };
 

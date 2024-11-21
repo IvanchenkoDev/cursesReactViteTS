@@ -1,12 +1,10 @@
-
-
 import './AboutUs.scss';
 import ButtonLearn from '../../images/ButtonLearn.svg';
 import Staffimg from '../../images/StaffPhoto.jpg';
 
 const AboutUs = () => {
   return (
-    <div className="about-us">
+    <div className="about-us" id="about">
       <div className="about-us__main">
         
         <div className="about-us__container">
@@ -17,7 +15,7 @@ const AboutUs = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               className="about-us__learn-more-link"
-              >
+            >
               <img src={ButtonLearn} alt="icon" className="about-us__icon" />
               <span>Learn more</span>
             </a>
@@ -53,4 +51,3 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
-

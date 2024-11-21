@@ -10,10 +10,11 @@ import IconModules from '../../images/Icon-modules.svg';
 type CourseModelItemProps = {
   icon: string;
   description: string;
+  count: number;
 };
 
-const CourseModelItem: React.FC<CourseModelItemProps> = ({ icon, description }) => (
-  <div className="our-courses__model-item">
+const CourseModelItem: React.FC<CourseModelItemProps> = ({ icon, description, count }) => (
+  <div className="our-courses__model-item" id={`course${count}`}>
     <img src={icon} alt="model-icon" className="our-courses__model-icon" />
     <p>{description}</p>
   </div>
@@ -28,7 +29,14 @@ type CourseProps = {
   models: { title: string; items: { description: string }[] }[];
 };
 
-const Course: React.FC<CourseProps> = ({ title, detailsLink, time, modules, price, models }) => (
+const Course: React.FC<CourseProps> = ({
+  title,
+  detailsLink,
+  time,
+  modules,
+  price,
+  models ,
+}) => (
   <div className="our-courses__section">
     <div className="our-courses__subtitle-container">
       <div className="our-courses__subtitle-wrapper">
@@ -67,11 +75,11 @@ const Course: React.FC<CourseProps> = ({ title, detailsLink, time, modules, pric
     <div className="our-courses__program">
       <h4 className="our-courses__program-title">The Three Primary Coaching Program Models:</h4>
       {models.map((model, index) => (
-        <div key={index} className="our-courses__model">
+        <div key={index} className="our-courses__model" id={`cour`}>
           <h5 className="our-courses__model-title">{model.title}</h5>
           <div className="our-courses__model-icons">
             {model.items.map((item, idx) => (
-              <CourseModelItem key={idx} icon={IconTodo} description={item.description} />
+              <CourseModelItem key={idx} icon={IconTodo} description={item.description} count={idx + 1} />
             ))}
           </div>
         </div>
@@ -92,6 +100,7 @@ const Course: React.FC<CourseProps> = ({ title, detailsLink, time, modules, pric
 const OurCourses: React.FC = () => {
   const coursesData = [
     {
+      id: '1',
       title: 'Level 1 (ACC Track) Experiential Executive Coaching Program',
       detailsLink: 'https://example.com',
       time: '60-hour',
@@ -117,6 +126,7 @@ const OurCourses: React.FC = () => {
       ],
     },
     {
+      id: '2',
       title: 'Level 2 Coaching Program',
       detailsLink: 'https://example.com',
       time: '125-hour',
@@ -150,10 +160,10 @@ const OurCourses: React.FC = () => {
   ];
 
   return (
-    <div className="our-courses">
+    <div className="our-courses" id={"course1"}>
       <h2 className="our-courses__title">Our Courses</h2>
-      {coursesData.map((course, index) => (
-        <Course key={index} {...course} />
+      {coursesData.map((course) => (
+        <Course key={course.id} {...course} />
       ))}
     </div>
   );

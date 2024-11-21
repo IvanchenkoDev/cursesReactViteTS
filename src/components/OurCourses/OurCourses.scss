@@ -20,6 +20,7 @@
     border: 2px solid $color-primary;
     border-radius: 20px;
     font-family: $font-family-title;
+
     h2 {
       max-width: $container-width;
     }
@@ -39,15 +40,13 @@
     }
 
     h5 {
-        margin: 16px 40px 8px 0;
-        font-family: $font-family-base;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 27px;
-        color: $color-text-secondary;
+      margin: 16px 40px 8px 0;
+      font-family: $font-family-base;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      color: $color-text-secondary;
     }
-
-   
   }
 
 
@@ -119,7 +118,6 @@
 
   &__model {
     &-title {
-      // margin: 40px 40px 16px 40px;
       font-family: $font-family-title;
       font-weight: 500;
       font-size: 20px;
@@ -182,12 +180,10 @@
       color: $color-text-primary;
       cursor: pointer;
       text-transform: uppercase;
-      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-      
+      transition: margin-right 1s, color 250ms, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;;
+
       &:hover {
         transform: translateY(-3px);
-        transition-delay: 1s, 250ms;
-        transition-property: margin-right, color;
         background-color: $color-text-secondary;
       }
 

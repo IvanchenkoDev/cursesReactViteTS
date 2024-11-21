@@ -22,7 +22,7 @@ const LeadMagnet: React.FC = () => {
   };
 
   return (
-    <div className="lead-magnet">
+    <div className="lead-magnet" id="contact">
       <div className="lead-magnet__container">
         <h2 className="lead-magnet__title">
           companies, universities, directors and presidents
