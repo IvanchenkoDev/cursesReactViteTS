@@ -17,7 +17,7 @@ const AboutUs = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               className="about-us__learn-more-link"
-            >
+              >
               <img src={ButtonLearn} alt="icon" className="about-us__icon" />
               <span>Learn more</span>
             </a>

@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
         alt="Logo" 
         className="footer__logo" 
         onClick={handleLogoClick}
-          style={{ cursor: "pointer" }}
+        style={{ cursor: "pointer" }}
       />
         <p className="footer__text">© 2024 Dickens Consulting Group, LLC</p>
         <div className="footer__buttons">

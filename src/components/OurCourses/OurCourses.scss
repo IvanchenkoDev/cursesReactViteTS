@@ -1,12 +1,5 @@
-$color-primary: #003366;              // Основной цвет (для кнопок, заголовков)
-$color-background: #E0E7EF;           // Цвет фона
-$color-text-primary: #E0E7EF;         // Основной цвет текста
-$color-text-secondary: #343434;       // Вторичный цвет текста
-
-$font-family-title: "Poppins", sans-serif;
-$font-family-base: "Roboto",  sans-serif;
-
-$container-width: 1340px;
+@use '../../styles/utils/variables.module' as *;
+@use '../../styles/utils/reset.scss' as *;
 
 .our-courses {
   max-width: $container-width;
@@ -22,41 +15,40 @@ $container-width: 1340px;
   }
 
   &__section {
-    border: 2px solid #003366;
+    border: 2px solid $color-primary;
     border-radius: 20px;
     padding: 40px;
-    margin: 20px 0 20px 0;
-    
+    margin: 20px 0;
+
     h2 {
       max-width: $container-width;
     }
 
-    h3 {
+    h3, h4, h5 {
       font-family: $font-family-title;
-      font-weight: 500;
       color: $color-primary;
-      font-size: 24px;
       text-transform: uppercase;
       line-height: 36px;
-    }
 
-    h4 {
-      font-family: $font-family-title;
-      font-weight: 500;
-      color: $color-primary;
-      font-size: 20px;
-      text-transform: uppercase;
-      line-height: 30px;
-      // margin: 40px 40px 16px 40px;
-    }
+      &.h3 {
+        font-weight: 500;
+        font-size: 24px;
+      }
 
-    h5 {
-      font-family: $font-family-base;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 27px;
-      color: $color-text-secondary;
-      margin: 16px 40px 8px 0;
+      &.h4 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      &.h5 {
+        font-family: $font-family-base;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        color: $color-text-secondary;
+        margin: 16px 40px 8px 0;
+      }
     }
   }
 
@@ -86,12 +78,12 @@ $container-width: 1340px;
     display: flex;
     gap: 12px; 
     margin: 40px 0;
-    
+
     & > div {
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: $color-text-primary;
+      background-color: $color-background;
       width: 128px;
       height: 47px;
       border-radius: 45px;
@@ -101,11 +93,11 @@ $container-width: 1340px;
       font-size: 18px;
       line-height: 27px;
 
-      & .our-courses__icon {
+      .our-courses__icon {
         margin-right: 8px;
       }
       
-      & p {
+      p {
         margin: 0; 
         font-family: $font-family-base;
       }
@@ -113,7 +105,6 @@ $container-width: 1340px;
   }
 
   &__model {
-    // margin: 16px 40px 16px 40px;
     &-title {
       font-family: $font-family-title;
       font-weight: 500;
@@ -127,7 +118,7 @@ $container-width: 1340px;
       display: flex;
       align-items: center;
       gap: 15px;
-      margin-bottom: 15px; 
+      margin-bottom: 15px;
       color: #343434;
       font-family: $font-family-base;
     }
@@ -138,14 +129,13 @@ $container-width: 1340px;
   }
 
   &__price {
-    // padding: 24px 0 40px 40px;
     font-family: $font-family-base;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-top: 24px;
+
     &-label {
-      font-family: $font-family-base;
       font-weight: 500;
       font-size: 30px;
       line-height: 45px;
@@ -154,7 +144,7 @@ $container-width: 1340px;
       border-right: 2px solid $color-primary;
       padding-right: 16px;
     }
-  
+
     &-amount {
       font-weight: 700;
       font-size: 22px;
@@ -164,8 +154,6 @@ $container-width: 1340px;
   }
 
   &__button-container {
-
-    
     .our-courses__button {
       margin-top: 40px;
       width: 185px;
@@ -180,6 +168,7 @@ $container-width: 1340px;
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.3s ease;
       text-transform: uppercase;
+
       &:hover {
         transform: scale(1.05);
       }
