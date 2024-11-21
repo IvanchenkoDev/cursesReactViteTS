@@ -1,5 +1,4 @@
 import "./Testimonials.scss"
-
 import React, { useState } from 'react';
 import bPrev from '../../images/ButtonPrev.svg';
 import bNext from '../../images/ButtonNext.svg';

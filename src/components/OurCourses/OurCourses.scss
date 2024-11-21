@@ -76,7 +76,6 @@
 
 
   &__details-link {
-    // padding-left: 190px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,11 +184,14 @@
       background-color: $color-primary;
       color: $color-text-primary;
       cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
       text-transform: uppercase;
-
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+      
       &:hover {
-        transform: scale(1.05);
+        transform: translateY(-3px);
+        transition-delay: 1s, 250ms;
+        transition-property: margin-right, color;
+        background-color: $color-text-secondary;
       }
 
       &:focus {
