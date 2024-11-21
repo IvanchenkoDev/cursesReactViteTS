@@ -16,41 +16,38 @@
 
   &__section {
     margin: 20px 0;
-    padding: 40px;
+    padding: 0 40px 40px 40px;
     border: 2px solid $color-primary;
     border-radius: 20px;
-    
-
+    font-family: $font-family-title;
     h2 {
       max-width: $container-width;
     }
 
-    h3, h4, h5 {
-      font-family: $font-family-title;
+    h3 {
+      font-weight: 500;
+      font-size: 24px;
+    }
+
+    h4 {
+      padding-top: 16px;
       text-transform: uppercase;
-      line-height: 36px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
       color: $color-primary;
+    }
 
-      &.h3 {
-        font-weight: 500;
-        font-size: 24px;
-      }
-
-      &.h4 {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 30px;
-      }
-
-      &.h5 {
+    h5 {
         margin: 16px 40px 8px 0;
         font-family: $font-family-base;
         font-weight: 500;
         font-size: 18px;
         line-height: 27px;
         color: $color-text-secondary;
-      }
     }
+
+   
   }
 
 
@@ -122,12 +119,12 @@
 
   &__model {
     &-title {
-      margin: 40px 40px 16px 40px;
+      // margin: 40px 40px 16px 40px;
       font-family: $font-family-title;
       font-weight: 500;
       font-size: 20px;
       line-height: 30px;
-      color: $color-primary;
+      color: $color-text-secondary;
       
     }
 
