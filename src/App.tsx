@@ -1,5 +1,6 @@
 
 import './App.scss'
+import './styles/main.scss';
 import AboutUs from './components/AboutUs/AboutUs'
 import Advantages from './components/Advantages/Advantages'
 import Faq from './components/FAQ/Faq'

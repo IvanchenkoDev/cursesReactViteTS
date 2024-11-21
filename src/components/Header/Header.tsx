@@ -12,7 +12,6 @@ const Header: React.FC = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  //Exemple method
   const closeDropdown = (event: MouseEvent) => {
     const dropdown = document.querySelector('.nav-courses');
     if (dropdown && !dropdown.contains(event.target as Node)) {

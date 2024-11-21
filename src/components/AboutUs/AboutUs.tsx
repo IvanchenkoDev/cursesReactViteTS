@@ -12,7 +12,12 @@ const AboutUs = () => {
         <div className="about-us__container">
           <h2 className="about-us__title">About Us</h2>
           <div className="about-us__learn-more">
-            <a href="https://example.com" className="about-us__learn-more-link">
+            <a 
+              href="https://example.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="about-us__learn-more-link"
+            >
               <img src={ButtonLearn} alt="icon" className="about-us__icon" />
               <span>Learn more</span>
             </a>

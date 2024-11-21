@@ -1,8 +1,5 @@
 import React from 'react';
 
-// const Advantages: React.FC = () => {
-//   return (
-
 import './LeadMagnet.scss';
 
 const LeadMagnet: React.FC = () => {

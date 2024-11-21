@@ -101,7 +101,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    
+    font-family: $font-family-base;
     color: $color-primary;
     background-color: $color-text-primary;
     border-radius: 14px;
@@ -182,12 +183,15 @@
   max-width: $container-width;
   display: flex;
   gap: 16px;
- 
+
+  
   &__link {
     position: relative;
     text-decoration: none;
     font-family: $font-family-title;
     color: $color-text-secondary;
+    padding: 0 16px 0 16px;
+    
     
     &::after {
       content: '';

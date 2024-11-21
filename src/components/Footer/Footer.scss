@@ -1,9 +1,5 @@
-$padding: 50px 290px;
-$color-primary: #003366;
-$color-text-primary: #FBFBFB;
-$color-text-secondary: #343434;
-$font-family-title: "Poppins", sans-serif; 
-$font-family-base: "Roboto", sans-serif;
+@use '../../styles/utils/variables.module' as *;
+@use '../../styles/utils/reset.scss' as *;
 
 .footer {
   max-width: 1340px;

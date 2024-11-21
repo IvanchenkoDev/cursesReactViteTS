@@ -18,7 +18,12 @@ const OurCourses = () => {
           <img className="our-courses__icon-star" alt="iconStar" src={IconStar} />
           <h3 className="our-courses__subtitle">Level 1 (ACC Track) Experiential Executive Coaching Program</h3>
           <div className="our-courses__details">
-            <a href="https://example.com" className="our-courses__details-link">
+            <a 
+              href="https://example.com" 
+              className="our-courses__details-link"
+              target="_blank" 
+              rel="noopener noreferrer"
+              >
               <img src={ButtonDetails} alt="Details" className="our-courses__details-icon" />
               <span>Details</span>
             </a>
@@ -109,7 +114,11 @@ const OurCourses = () => {
           <img className="our-courses__icon-star" alt="iconStar" src={IconStar} />
           <h3 className="our-courses__subtitle">Level 1 (ACC Track) Experiential Executive Coaching Program</h3>
           <div className="our-courses__details">
-            <a href="https://example.com" className="our-courses__details-link">
+            <a 
+              href="https://example.com" 
+              className="our-courses__details-link"
+              target="_blank" rel="noopener noreferrer"
+            >
               <img src={ButtonDetails} alt="Details" className="our-courses__details-icon" />
               <span>Details</span>
             </a>
