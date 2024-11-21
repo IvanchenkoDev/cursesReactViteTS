@@ -30,61 +30,62 @@ const Faq: React.FC = () => {
   };
 
   return (
-    <div className="faq-container">
-      <h2 className="faq-title">FAQ</h2>
-      <div className="faq-content">
-        <div className="faq-messages">
-          {messages.map((msg, index) => (
-            <div
-              className={`faq-item ${expandedIndexes.includes(index) ? "open" : ""}`}
-              key={index}
-            >
-              <div className="faq-item-header" onClick={() => toggleExpand(index)}>
-                {msg.name}
-                <span className="faq-plus-btn">
-                  {expandedIndexes.includes(index) ? "−" : "+"}
-                </span>
-              </div>
-              {expandedIndexes.includes(index) && (
-                <div className="faq-item-body">{msg.text}</div>
-              )}
+   
+    <div className="faq">
+    <h2 className="faq__title">FAQ</h2>
+    <div className="faq__content">
+      <div className="faq__messages">
+        {messages.map((msg, index) => (
+          <div
+            className={`faq__item ${expandedIndexes.includes(index) ? "faq__item--open" : ""}`}
+            key={index}
+          >
+            <div className="faq__item-header" onClick={() => toggleExpand(index)}>
+              {msg.name}
+              <span className="faq__item-plus-btn">
+                {expandedIndexes.includes(index) ? "−" : "+"}
+              </span>
             </div>
-          ))}
-        </div>
+            {expandedIndexes.includes(index) && (
+              <div className="faq__item-body">{msg.text}</div>
+            )}
+          </div>
+        ))}
+      </div>
 
-        <div className="faq-form-container">
-          <h3 className="faq-form-title">Ask your question</h3>
-          <form onSubmit={handleSubmit} className="faq-form">
-            <input
-              type="text"
-              placeholder="Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              className="faq-form-input"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="faq-form-input"
-            />
-            <textarea
-              placeholder="Enter your question here..."
-              value={question}
-              onChange={(e) => setQuestion(e.target.value)}
-              required
-              className="faq-form-input faq-form-input--text"
-            />
-            <button type="submit" className="faq-form-submit">
-              Send your message
-            </button>
-          </form>
-        </div>
+      <div className="faq__form-container">
+        <h3 className="faq__form-title">Ask your question</h3>
+        <form onSubmit={handleSubmit} className="faq__form">
+          <input
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            className="faq__form-input"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="faq__form-input"
+          />
+          <textarea
+            placeholder="Enter your question here..."
+            value={question}
+            onChange={(e) => setQuestion(e.target.value)}
+            required
+            className="faq__form-input faq__form-input--text"
+          />
+          <button type="submit" className="faq__form-submit">
+            Send your message
+          </button>
+        </form>
       </div>
     </div>
+  </div>
   );
 };
 

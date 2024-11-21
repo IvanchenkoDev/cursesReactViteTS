@@ -6,19 +6,20 @@
   margin: 50px auto; 
 
   &__title {
-    color: $color-primary;
     font-family: $font-family-title;
     font-weight: 500;
     font-size: 42px;
     line-height: 63px;
+    color: $color-primary;
     text-transform: uppercase;
   }
 
   &__section {
+    margin: 20px 0;
+    padding: 40px;
     border: 2px solid $color-primary;
     border-radius: 20px;
-    padding: 40px;
-    margin: 20px 0;
+    
 
     h2 {
       max-width: $container-width;
@@ -26,9 +27,9 @@
 
     h3, h4, h5 {
       font-family: $font-family-title;
-      color: $color-primary;
       text-transform: uppercase;
       line-height: 36px;
+      color: $color-primary;
 
       &.h3 {
         font-weight: 500;
@@ -42,30 +43,30 @@
       }
 
       &.h5 {
+        margin: 16px 40px 8px 0;
         font-family: $font-family-base;
         font-weight: 500;
         font-size: 18px;
         line-height: 27px;
         color: $color-text-secondary;
-        margin: 16px 40px 8px 0;
       }
     }
   }
 
 
   &__subtitle-container {
+    margin: 40px 0;
+    gap: 15px;
     display: flex;
     align-items: center; 
     justify-content: space-between;
-    gap: 15px;
-    margin: 40px 0;
   }
 
   &__subtitle-wrapper {
+    padding-right: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 5px;
   }
 
   &__subtitle {
@@ -75,6 +76,7 @@
 
 
   &__details-link {
+    // padding-left: 190px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,27 +88,27 @@
     color: $color-text-secondary;
     text-decoration: none;
     text-transform: uppercase;
-    padding-left: 190px;
   }
 
   &__icons {
-    display: flex;
-    gap: 12px; 
     margin: 40px 0;
+    gap: 12px; 
+    display: flex;
+    
 
     & > div {
+      width: 128px;
+      height: 47px;
+      padding: 0 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: $color-background;
-      width: 128px;
-      height: 47px;
-      border-radius: 45px;
-      padding: 0 10px;
       font-family: $font-family-base;
       font-weight: 500;
       font-size: 18px;
       line-height: 27px;
+      border-radius: 45px;
+      background-color: $color-background;
 
       .our-courses__icon {
         margin-right: 8px;
@@ -121,20 +123,21 @@
 
   &__model {
     &-title {
+      margin: 40px 40px 16px 40px;
       font-family: $font-family-title;
       font-weight: 500;
-      color: $color-primary;
       font-size: 20px;
       line-height: 30px;
-      margin: 40px 40px 16px 40px;
+      color: $color-primary;
+      
     }
 
     &-item {
+      margin-bottom: 15px;
+      gap: 15px;
       display: flex;
       align-items: center;
-      gap: 15px;
-      margin-bottom: 15px;
-      color: #343434;
+      color: $color-text-secondary;
       font-family: $font-family-base;
     }
 
@@ -144,27 +147,28 @@
   }
 
   &__price {
-    font-family: $font-family-base;
+    margin-top: 24px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 24px;
+    font-family: $font-family-base;
 
     &-label {
+      padding-right: 16px;
       font-weight: 500;
       font-size: 30px;
       line-height: 45px;
       color: $color-primary;
       text-transform: uppercase;
       border-right: 2px solid $color-primary;
-      padding-right: 16px;
+      
     }
 
     &-amount {
+      padding-left: 16px;
       font-weight: 700;
       font-size: 22px;
       color: $color-primary;
-      padding-left: 16px;
     }
   }
 
@@ -173,13 +177,13 @@
       margin-top: 40px;
       width: 185px;
       height: 58px;
-      background-color: $color-primary;
-      color: $color-text-primary;
       padding: 15px 25px;
       font-size: 18px;
       font-weight: 500;
       border-radius: 5px;
       border: none;
+      background-color: $color-primary;
+      color: $color-text-primary;
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.3s ease;
       text-transform: uppercase;
